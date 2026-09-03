@@ -1,0 +1,41 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# --- Env / secrets (never commit real credentials) ---
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+
+# --- ML artifacts (large / regenerable — don't commit) ---
+ml_engine/data/*.csv
+ml_engine/data/*.zip
+ml_engine/models/*.onnx
+ml_engine/models/*.h5
+ml_engine/models/*.pt
+mlruns/
+
+# --- Audit / runtime logs ---
+*.log
+security_audit.csv
+
+# --- Node (client widget tooling, if used) ---
+node_modules/
+dist/
+
+# --- IaC state ---
+infrastructure/**/.terraform/
+infrastructure/**/*.tfstate
+infrastructure/**/*.tfstate.backup
+
+# --- OS / editor ---
+.DS_Store
+.vscode/
+.idea/
